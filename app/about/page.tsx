@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen pt-32 pb-20 px-6 md:px-12 max-w-6xl mx-auto">
@@ -22,11 +24,13 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="md:col-span-4 flex flex-col justify-end">
-          <div className="aspect-[3/4] bg-neutral-200 overflow-hidden rounded-sm mb-4">
-            <img
+          <div className="aspect-[3/4] bg-neutral-200 overflow-hidden rounded-sm mb-4 relative">
+            <Image
               src="/9.jpg"
               alt="Adarsh Kumar"
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              fill
+              className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>
           <p className="font-mono text-[10px] uppercase tracking-widest text-secondary text-right">
